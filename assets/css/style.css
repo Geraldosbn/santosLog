@@ -22,7 +22,7 @@ body {
     background-size: 20%;
     background-color: white;
     width: auto;
-    height: auto;
+    height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -36,14 +36,13 @@ a {
     padding: 10px;
 }
 
-a:hover {
-    background-color: black;
-    color: white;
+#img {
+    height: 35px;
 }
 
 main {
     background-color: rgba(0,0, 0, 0.7);
-    height: 100vh ;
+    height: 65vh ;
     padding: 5.45%;
 }
 
@@ -64,32 +63,34 @@ main h2 {
 }
 
 #contatoResultado{
-    text-decoration: underline;
+
     color: white;
 }
 
 #btnCalcular {
-    margin: 15px;
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
 }
 
 #btnCalcular:hover {
-    background-color: #27e951;
+    color: white;
+    background-color: #28292c;
 }
 
 @media (min-width: 1400px) {
     main {
-        height: 100vh; 
+        height: 70vh; 
     }
     .topo {
-        background-size: 30%;
-        height: auto;
-        filter: grayscale(50%);
+        background-size: 20%;
+        height: 30px;
     }
     a {
-        font-size: 35px;
+        font-size: 20px;
     }
     main * {
-        font-size: 25px;
+        font-size: 20px;
     }
     main h2 {
         font-size: 45px;

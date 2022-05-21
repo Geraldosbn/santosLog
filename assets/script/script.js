@@ -7,27 +7,30 @@
             const espacoCarga = event.target.querySelector('#espacoCarga').value
             const kmPercorrido = event.target.querySelector('#kmPercorrido').value
 
-            if (espacoCarga == 1) {
-                const valorKm = 3
+            if (espacoCarga == "Exclusiva") {
+                const valorKm = 6
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
-                const msg = `O valor do seu frete é: ${valorReal}`
+                const msg = `O valor do seu frete é de: ${valorReal}`
                 const resultado = document.querySelector('.resultado')
-                
-                resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731">Clique aqui e entre em contato conosco!</a></p>`
-                
-                console.log(valorFinal)
+                const msgContato = `Olá fiz um orçamento no seu site, de uma carga ${espacoCarga} com a distância de ${kmPercorrido} KM e ficou em ${valorReal} gostaria de fechar!`
 
-            } else if (espacoCarga == 2) {
-                const valorKm = 2.60
+                resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731&text=${msgContato}">Clique aqui <img 
+                src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
+
+            } else if (espacoCarga == "Meio Baú") {
+                const valorKm = 5.80
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
-                const msg = `O valor do seu frete é: ${valorReal}`
+                const msg = `O valor do seu frete é de: ${valorReal}`
                 const resultado = document.querySelector('.resultado')
-                
-                resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731">Clique aqui e entre em contato conosco!</a></p>`
-                
-                console.log(valorFinal)
+                const msgContato = `Olá fiz um orçamento no seu site, de uma carga ${espacoCarga} com a distância de ${kmPercorrido} KM e ficou em ${valorReal} gostaria de fechar!`
+
+                resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731&text=${msgContato}">Clique aqui <img 
+                src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
+            }
+            else {
+                alert('Selecione o Espaço necessario!')
             }
 
 
