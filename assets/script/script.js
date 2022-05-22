@@ -8,7 +8,7 @@
             const kmPercorrido = event.target.querySelector('#kmPercorrido').value
 
             if (espacoCarga == "Exclusiva") {
-                const valorKm = 6
+                const valorKm = 5.20
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
                 const msg = `O valor do seu frete é de: ${valorReal}`
@@ -19,7 +19,7 @@
                 src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
 
             } else if (espacoCarga == "Complemento de Carga") {
-                const valorKm = 5.80
+                const valorKm = 3.80
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
                 const msg = `O valor do seu frete é de: ${valorReal}`
