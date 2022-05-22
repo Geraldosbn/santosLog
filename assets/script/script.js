@@ -18,7 +18,7 @@
                 resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731&text=${msgContato}">Clique aqui <img 
                 src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
 
-            } else if (espacoCarga == "Meio Baú") {
+            } else if (espacoCarga == "Complemento de Carga") {
                 const valorKm = 5.80
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
