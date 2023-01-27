@@ -8,7 +8,7 @@
             const kmPercorrido = event.target.querySelector('#kmPercorrido').value
 
             if (espacoCarga == "Exclusiva") {
-                const valorKm = 6.5
+                const valorKm = 7.5
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
                 const msg = `O valor do seu frete é de: ${valorReal}`
