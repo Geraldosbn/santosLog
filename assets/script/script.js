@@ -19,7 +19,7 @@
                 src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
 
             } else if (espacoCarga == "Complemento de Carga") {
-                const valorKm = 4.70
+                const valorKm = 5.80
                 const valorFinal = kmPercorrido * valorKm
                 const valorReal = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(valorFinal)
                 const msg = `O valor do seu frete é de: ${valorReal}`
