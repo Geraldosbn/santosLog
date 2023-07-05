@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,20 @@
     <title>SantosLog</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header class="topo">
-            <a href="https://api.whatsapp.com/send?phone=5527998237731"><img 
-                src="./assets/img/whatsapp.png" id="img"></a>
+        <a href="https://api.whatsapp.com/send?phone=5527998237731"><img src="./assets/img/whatsapp.png" id="img"></a>
     </header>
     <main class="meio">
         <h2 class="orcamento">Faça aqui o seu pré-orçamento!</h2>
         <form id="form">
-                <label for="espacoCarga">Espaço necessário:</label>
-                <select name="espacoCarga" id="espacoCarga" name="espacoCarga" required>
-                    <option value="select">Selecione uma opção</option>
-                    <option value="Exclusiva">Exclusiva </option>
-                    <option value="Complemento de Carga">Complemento de Carga</option>
-                </select>
+            <label for="espacoCarga">Espaço necessário:</label>
+            <select name="espacoCarga" id="espacoCarga" name="espacoCarga" required>
+                <option value="select">Selecione uma opção</option>
+                <option value="Exclusiva">Exclusiva </option>
+                <option value="Complemento de Carga">Complemento de Carga</option>
+            </select>
 
             <label for="kmPercorrido">Insira a distância (Km):</label>
             <input type="number" id="kmPercorrido" name="kmPercorrido" required>
@@ -29,13 +30,14 @@
         </form>
 
         <div class="resultado">
-            
+
         </div>
 
         <div class="alert">
             <p>*Valores estão sujeitos a alteração se houver a incidência de pedágios na rota!</p>
         </div>
     </main>
-   <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/script.js"></script>
 </body>
+
 </html>
