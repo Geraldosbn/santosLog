@@ -10,7 +10,7 @@ form.addEventListener('submit', function (event) {
     const valorFinal = kmPercorrido * valorKm
     const valorReal = new Intl.NumberFormat('pt-BR', {
       style: 'currency',
-      currency: 'BRL',
+      currency: 'BRL'
     }).format(valorFinal)
     const msg = `O valor do seu frete é de: ${valorReal}`
     const resultado = document.querySelector('.resultado')
@@ -18,12 +18,12 @@ form.addEventListener('submit', function (event) {
 
     resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731&text=${msgContato}">Clique aqui <img
                 src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
-  } else if (espacoCarga == 'Complemento de Carga') {
+  } else if (espacoCarga == 'Compartilhada') {
     const valorKm = 6.0
     const valorFinal = kmPercorrido * valorKm
     const valorReal = new Intl.NumberFormat('pt-BR', {
       style: 'currency',
-      currency: 'BRL',
+      currency: 'BRL'
     }).format(valorFinal)
     const msg = `O valor do seu frete é de: ${valorReal}`
     const resultado = document.querySelector('.resultado')
@@ -32,6 +32,6 @@ form.addEventListener('submit', function (event) {
     resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731&text=${msgContato}">Clique aqui <img
                 src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`
   } else {
-    alert('Selecione o Espaço necessario!')
+    alert('Selecione o espaço necessario!')
   }
 })
