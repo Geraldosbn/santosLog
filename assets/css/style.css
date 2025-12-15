@@ -2,20 +2,26 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-h: clamp(48px, 6vw, 72px);
 }
 
 body {
-  background-image: url('../img/caminhao_branco.png');
+  background-image: url('../img/caminhao_branco_zoom_out.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 20%;
-  color: #ffff;
+  background-position-x: -150px;
+  background-position-y: 10px;
+  color: #ffffff;
   height: 100vh;
 }
 
 .topo {
   background-color: #2d2d2d;
-  height: 50px;
+  height: var(--header-h);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -26,20 +32,25 @@ a {
   text-decoration: none;
   color: black;
   padding: 10px;
+  font-size: 12px;
 }
 
 #img {
-  height: 36px;
+  height: calc(var(--header-h) * 0.6);
 }
-
+#imgResultado {
+  height: 80px;
+}
 .brand {
   grid-column: 2;
   justify-self: center;
 }
 
 .brand .logo {
-  height: 50px;
+  height: auto;
+  max-height: calc(var(--header-h) - 8px);
   object-fit: contain;
+  max-width: 100%;
 }
 
 .whats {
@@ -58,7 +69,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(90vh - 50px);
+  min-height: calc(100vh - var(--header-h));
 }
 
 main * {
@@ -69,16 +80,13 @@ main * {
 }
 
 main h2 {
-  font-size: 30px;
+  font-size: clamp(1rem, 3vw + 0.5rem, 2.8rem);
+  text-align: center;
 }
 
 .card {
-  background-color: rgba(40, 41, 44, 0.8);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
 }
 
 .card label {
@@ -103,8 +111,14 @@ main h2 {
 
 .resultado.card {
   display: none;
+  background-color: rgba(40, 41, 44, 0.8);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   margin-top: 16px;
   gap: 8px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .resultado.card.show {
@@ -131,35 +145,49 @@ main h2 {
   font-weight: 700;
 }
 
+@media (min-width: 375px) {
+  body {
+    background-position-x: -130px;
+    background-position-y: 10px;
+  }
+  a {
+    font-size: 12px;
+  }
+  .card,
+  .resultado.card {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-position-x: -100px;
+    background-position-y: 10px;
+  }
+  a {
+    font-size: 14px;
+  }
+  .card,
+  .resultado.card {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('../img/caminhao_branco.png');
+    background-position: 20% 10px;
+  }
+}
+
 @media (min-width: 1400px) {
   main {
-    min-height: calc(90vh - 50px);
+    min-height: calc(100vh - var(--header-h));
   }
   a {
     font-size: 20px;
   }
   main * {
     font-size: 20px;
-  }
-  main h2 {
-    font-size: 45px;
-  }
-}
-
-@media (max-width: 532px) {
-  a {
-    font-size: 10px;
-  }
-  .brand .logo {
-    height: 72px;
-  }
-  main h2 {
-    font-size: 15px;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: calc(90vh - 50px);
   }
 }
