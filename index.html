@@ -11,25 +11,31 @@
 
 <body>
     <header class="topo">
-        <a href="https://api.whatsapp.com/send?phone=5527998237731"><img src="./assets/img/whatsapp.png" id="img"></a>
+        <div class="brand">
+            <img src="./assets/img/logo_nova_preta-removebg-preview.png" class="logo" alt="SantosLog">
+        </div>
+        <a class="whats" target="_blank" href="https://api.whatsapp.com/send?phone=5527998237731"
+            aria-label="Contato WhatsApp">
+            <img src="./assets/img/whatsapp.png" id="img" alt="WhatsApp">
+        </a>
     </header>
     <main class="meio">
         <h2 class="orcamento">Faça aqui o seu pré-orçamento!</h2>
-        <form id="form">
+        <form id="form" class="card">
             <label for="espacoCarga">Espaço necessário:</label>
-            <select name="espacoCarga" id="espacoCarga" name="espacoCarga" required>
+            <select id="espacoCarga" name="espacoCarga" required>
                 <option value="select">Selecione uma opção</option>
-                <option value="Exclusiva">Mudança exclusiva </option>
-                <option value="Compartilhada">Mudança compartilhada</option>
+                <option value="Exclusiva">Transporte de Mudança exclusiva </option>
+                <option value="Compartilhada">Transporte de Mudança compartilhada</option>
             </select>
 
             <label for="kmPercorrido">Insira a distância (Km):</label>
             <input type="number" id="kmPercorrido" name="kmPercorrido" required>
             <br>
-            <input type="submit" id="btnCalcular" value="Calcular">
+            <input type="submit" id="btnCalcular" value="Calcular" disabled>
         </form>
 
-        <div class="resultado">
+        <div class="resultado card">
 
         </div>
 
