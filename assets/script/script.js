@@ -48,7 +48,7 @@ form.addEventListener('submit', function (event) {
     const msgContato = `Olá fiz um orçamento no seu site, de uma carga ${espacoCarga} com a distância de ${kmPercorrido} KM e ficou em ${valorReal} gostaria de fechar!`;
 
     resultado.innerHTML = `<p class="paragrafoResultado">${msg} <a target="_blank" id="contatoResultado"href="https://api.whatsapp.com/send?phone=5527998237731&text=${msgContato}">Clique aqui <img
-                src="./assets/img/whatsapp.png" id="img">entre em contato conosco!</a></p>`;
+                src="./assets/img/whatsapp.png" id="imgResultado">entre em contato conosco!</a></p>`;
     resultado.classList.add('show');
   } else {
     const resultado = document.querySelector('.resultado');
